@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\public",
+    "\\src\\public\\css",
+    "\\src\\routes",
+    "\\src\\views",
+    "\\src\\views\\layouts",
+    "\\src\\views\\mascotas",
+    "\\src\\views\\partials"
+  ],
+  "SelectedNode": "\\src\\routes\\mascotas.js",
+  "PreviewInSolutionExplorer": false
+}

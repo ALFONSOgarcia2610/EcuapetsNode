@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row d-flex justify-content-center mt-4 m-4">
+        <div class="col-xl-8 col-lg-5 formulario card">
+            <form action="/mascotas/new-mascotas" method="POST">
+                <div class="mb-3 letra d-flex justify-content-center fw-bold text-dark">
+                    <h4><i class="fa-solid fa-paw text-danger"></i>Nueva Mascota</h4>
+                </div>
+                <div class="border mb-2 baner">
+                    <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-dark">
+                        <h4><i class="fa-solid fa-shield-dog text-danger"></i>Datos Basicos</h4>
+                    </div>
+                    <div class="form-group d-flex justify-content-around">
+                        <div class="mb-2 mx-2">
+                            <label for="nombre" class="fw-bold">*Nombre:</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="ej: Kira"
+                                required>
+                            <div class="nombre text-danger "></div>
+                        </div>
+                        <div class="mb-4 d-flex justify-content-center">
+                            <div class="mx-2">
+                                <label for="fecha" class="fw-bold"> <i class="bi bi-person-fill"></i>*Fecha de nacimiento:</label>
+                                <input type="date" class="form-control" name="fechanacimiento" id="fechanacimiento">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex justify-content-around">
+                        <div class="form-group col-md-4 mx-2">
+                            <label for="inputState" class="fw-bold">*Especie</label>
+                            <select id="especie" name= "especie" class="form-control">
+                                <option selected>Perro</option>
+                                <option>Gato</option>
+                            </select required>
+                        </div>
+
+                        <div class="mx-2">
+                            <label for="raza" class="fw-bold"> <i class="bi bi-person-fill"></i>*Raza:</label>
+                            <input type="text" class="form-control" name="raza" id="raza" placeholder="ej: Lobo"
+                                required>
+                            <div class="raza text-danger "></div>
+                        </div>
+
+                    </div>
+                    <label for="sexo" class="d-flex justify-content-around mb-2 fw-bold">*Sexo: </label>
+                    <div class="d-flex justify-content-center">
+                            <select id="genero" name= "genero" class="form-control">
+                                <option selected>Macho</option>
+                                <option>Hembra</option>
+                            </select required>
+                        </div>
+
+                </div>
+                <div class="mb-2 d-flex justify-content-center ">
+                    <button id="botton" class=" btn btn-success d-flex justify-content-center olvide1">
+                        <span>Registrar</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

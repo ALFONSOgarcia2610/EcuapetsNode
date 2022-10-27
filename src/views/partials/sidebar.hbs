@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--<title>Dashboard Sidebar Menu</title>-->
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <a href="/"><span class="image">
+                        <img herft="/mascotas" src="/img/logo.png" alt="">
+                    </span></a>
+
+                <div class="text logo-text">
+                    <span class="name">Ecuapets</span>
+                    <span class="profession">{{user.nombre}}</span>
+                    <span class="profession">{{user.apellido}}</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="/mascotas">
+                            <i class="fa-solid fa-shield-dog icon"></i>
+                            <span class="text nav-text">Mis Mascotas</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/mascotas/agregar">
+                            <i class='bx bxs-add-to-queue icon'></i>
+                            <span class="text nav-text">Agregar Mascota</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/mascotas/reportadas">
+                            <i class='bx bxs-bell-ring icon'></i>
+                            <span class="text nav-text">Extraviadas</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/usuario/edit/{{user.id}}">
+                            <i class='bx bxs-contact icon'></i>
+                            <span class="text nav-text">Editar Contacto</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="mb-4">
+                    <a href="/users/logout">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Salir</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+    </nav>
+    <script>
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle"),
+            searchBtn = body.querySelector(".search-box"),
+            modeSwitch = body.querySelector(".toggle-switch"),
+            modeText = body.querySelector(".mode-text");
+
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        })
+
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+        })
+
+        modeSwitch.addEventListener("click", () => {
+            body.classList.toggle("dark");
+
+            if (body.classList.contains("dark")) {
+                modeText.innerText = "Light mode";
+            } else {
+                modeText.innerText = "Dark mode";
+
+            }
+        });
+    </script>
+
+</body>
+
+</html>

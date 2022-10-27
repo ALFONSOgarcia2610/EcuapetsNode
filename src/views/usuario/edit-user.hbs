@@ -1,0 +1,99 @@
+<div class="mb-5 col-md-10 mx-auto mt-4 ">
+    <div class="card formulario">
+        <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-dark">
+            <h4><i class="fa-solid fa-pen-to-square text-success"></i>Editar Datos de Contacto</h4>
+        </div>
+        <div class="card-body">
+            <form action="/usuario/edit-user/{{user._id}}?_method=PUT" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="baner mb-4">
+                    <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-dark">
+                        <h4><i class='bx bxs-user text-danger'></i>Datos Basicos</h4>
+                    </div>
+                    <div class="mb-4 d-flex justify-content-center">
+                        <div class="md-5">
+                            <label class="form-label fw-bold">Usuario</label>
+                            <p>{{usuario.nombre}} {{usuario.apellido}}</p>
+                        </div>
+                    </div>
+                    <div class="mb-4 d-flex justify-content-center">
+                        <div class="">
+                            <label class="form-label fw-bold">Correo:</label>
+                            <p>{{usuario.email}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="baner mb-4">
+                    <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-dark">
+                        <h4><i class='bx bxs-phone text-danger'></i>Datos de Contacto</h4>
+                    </div>
+                    <div class="mb-4 d-flex justify-content-between">
+                            <div class="form-group col-md-4">
+                            <label for="inputState" class="fw-bold">*Provincia</label>
+                            <select id="provincia" name= "provincia" class="form-control" value="{{usuario.provincia}}">
+                                <option selected>{{usuario.provincia}}</option>
+                                <option>Manabí</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+            
+                  <div class="form-group col-md-4">
+                            <label for="canton" class="fw-bold">*Canton</label>
+                            <select id="canton" name= "canton" class="form-control" value="{{usuario.canton}}">
+                                 <option>{{usuario.canton}}</option>
+                                <option>Portoviejo</option>
+                                <option>Bolívar</option><option>Chone</option><option>EL Carmen</option>
+                                <option>Flavio Alfaro</option><option>Jama</option><option>Jaramijó</option>
+                                <option>Junín</option><option>Manta</option><option>Montecristi</option>
+                                <option>Olmedo</option><option>Paján</option><option>Pedernales</option>
+                                <option>Pichincha</option><option>Puerto López</option><option>Rocafuerte</option>
+                                <option>San Vicente</option><option>Santa Ana</option><option>Sucre</option>
+                                <option>Tosagua</option><option>24 de Mayo</option>
+                                </select>
+                        </div>
+            </div>
+                    <div class="mb-4 d-flex justify-content-around"> 
+                        <div class="mx-2">
+                            <label class="form-label fw-bold">Calle Principal</label>
+                            <div class="form-group">
+                                <input type="text" name="c1" class="form-control" placeholder="Calle"
+                                    value="{{usuario.c1}}">
+                            </div>
+                        </div>
+                        <div class="mx-2">
+                            <label class="form-label fw-bold">Calle Secundaria</label>
+                            <div class="form-group">
+                                <input type="text" name="c2" class="form-control" placeholder="Calle"
+                                    value="{{usuario.c2}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4 d-flex justify-content-around">
+                        <div class="mx-2">
+                            <label class="form-label fw-bold">Telefono Principal</label>
+                            <div class="form-group">
+                                <input type="text" name="tel1" class="form-control" placeholder="tel1"
+                                    value="{{usuario.tel1}}">
+                            </div>
+                        </div>
+                        <div class="mx-2">
+                            <label class="form-label fw-bold">Telefono Secundario</label>
+                            <div class="form-group">
+                                <input type="text" name="tel2" class="form-control" placeholder="tel2"
+                                    value="{{usuario.tel2}}">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="d-flex justify-content-center olvide1">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

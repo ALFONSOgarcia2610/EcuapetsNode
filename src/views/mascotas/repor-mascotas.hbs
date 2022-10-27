@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row d-flex justify-content-center mt-4 m-4">
+        <div class="col-xl-8 col-lg-5 formulario card">
+            <div class="mb-3 letra d-flex justify-content-center fw-bold text-dark">
+                    <h4><i class="fa-sharp fa-solid fa-bullhorn text-danger"></i>Reportar a {{mascota.nombre}}</h4>
+                </div>
+           <form action="/mascotas/repor-mascotas/{{mascota._id}}?_method=PUT" method="POST"
+                enctype="multipart/form-data">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="form-group">
+                    <label class="form-label fw-bold">Lugar de Extravio</label>
+                    <textarea name="lugar" class="form-control">{{lugar}}</textarea>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label fw-bold">Detalle Adiconal</label>
+                    <textarea name="detalle" class="form-control">{{detalle}}</textarea>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label fw-bold">Recompensa</label>
+                    <input type="number" class="form-control" name="recompensa" id="v4" placeholder="En caso de no ofrecer Recompensa colocar 0">
+                </div>
+                <div class="d-flex justify-content-center olvide1">
+                    <button class="btn btn-danger btn-block" type="submit">
+                        Generar Reporte
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

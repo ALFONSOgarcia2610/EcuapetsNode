@@ -1,0 +1,117 @@
+<div class="row d-flex justify-content-center mt-10 m-4">
+    <div class=" col-lg-5  formulario">
+        <form action="/users/signup" method="POST">
+            <div>
+                <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-dark">
+                    <h4 class="fw-bold"><i class="fa-solid fa-user"></i>Nuevo Usuario</h4>
+                </div>
+                <br>
+                <div class="mb-4 d-flex justify-content-around">
+                    <div class="mx-2">
+                        <label for="nombre" class="fw-bold"> <i class="bi bi-person-fill"></i> *Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="ej: Pepe"
+                            required>
+                        <div class="nombre text-danger "></div>
+                    </div>
+                    <div class="mx-2">
+                        <label for="apellido" class="fw-bold"> <i class="bi bi-person-bounding-box"></i> *Apellido</label>
+                        <input type="text" class="form-control" name="apellido" id="apellido" placeholder="ej: Pacheco"
+                            required>
+                        <div class="apellido text-danger"></div>
+                    </div>
+                </div>
+                <div class="mb-4 mx-2">
+                    <label for="correo" class="fw-bold"><i class="bi bi-envelope-fill"></i>*Correo</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="ej: gpmcheco@mail.com"
+                        required>
+                    <div class="correo text-danger"></div>
+                </div>
+                <div class="mb-4 d-flex justify-content-around">
+                    <div class="mx-2">
+                        <label for="repiteclave" class="fw-bold"> <i class="bi bi-person-fill"></i>*Contraseña</label>
+                        <input type="text" class="form-control" name="password" id="password" placeholder="*********"
+                            required>
+                        <div class="repiteclave text-danger "></div>
+                    </div>
+                    <div class="mx-2">
+                        <label for="repiteclave1" class="fw-bold"> <i class="bi bi-person-bounding-box"></i>*Repita la
+                            contraseña</label>
+                        <input type="text" class="form-control" name="confirm_password" id="confirm_password"
+                            placeholder="*********" required>
+                        <div class="repiteclave text-danger"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="sexo" class="fw-bold"><i class="bi bi-gender-ambiguous"></i> *Genero: </label>
+                <input type="radio" class="form-check-input" name="genero" value="masculino"> Masculino
+                <input type="radio" class="form-check-input" name="genero" value="femenino"> Femenino
+                <input type="radio" class="form-check-input" name="genero" value="femenino"> No Especifico
+                <div class="sexo text-danger"></div>
+            </div required>
+            <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-dark">
+                    <h4 class="fw-bold"><i class="fa-solid fa-phone"></i>Datos de Contacto</h4>
+                </div>
+            <div class="mb-4 d-flex justify-content-between">
+                <div class="mx-2 form-group col-md-5">
+                            <label for="provincia" class="fw-bold">*Provincia</label>
+                            <select id="provincia" name= "provincia" class="form-control">
+                                <option selected>Manabí</option>
+                                <option>...</option>
+                            </select>
+                      
+                    <div class="pais text-danger "></div>
+                    
+                </div>
+                <div class="mx-2 form-group col-md-5">
+                            <label for="inputState" class="fw-bold">*Canton</label>
+                            <select id="canton" name= "canton" class="form-control">
+                                <option>Portoviejo</option>
+                                <option>Bolívar</option><option>Chone</option><option>EL Carmen</option>
+                                <option>Flavio Alfaro</option><option>Jama</option><option>Jaramijó</option>
+                                <option>Junín</option><option>Manta</option><option>Montecristi</option>
+                                <option>Olmedo</option><option>Paján</option><option>Pedernales</option>
+                                <option>Pichincha</option><option>Puerto López</option><option>Rocafuerte</option>
+                                <option>San Vicente</option><option>Santa Ana</option><option>Sucre</option>
+                                <option>Tosagua</option><option>24 de Mayo</option>
+                            </select>
+                </div>
+            </div>
+
+            <div class="mb-4 d-flex justify-content-between">
+                <div class="mx-2">
+                    <label for="calle1" class="fw-bold"> <i class="bi bi-person-fill"></i>Calle Principal</label>
+                    <input type="text" class="form-control" name="c1" id="c1" placeholder="ej: Av. Urbina">
+                    <div class="calle1 text-danger "></div>
+                </div>
+                <div class="mx-2">
+                    <label for="calle2" class="fw-bold"> <i class="bi bi-person-bounding-box"></i>Calle Secundaria</label>
+                    <input type="text" class="form-control" name="c2" id="c2" placeholder="ej: Av. Rocafuerte">
+                    <div class="calle2 text-danger"></div>
+                </div>
+            </div>
+
+            <div class="mb-4 d-flex justify-content-between">
+                <div class="mx-2">
+                    <label for="tel1" class="fw-bold"> <i class="bi bi-person-fill"></i>Teléfono 1</label>
+                    <input type="text" class="form-control" name="tel1" id="tel1" placeholder="ej: 0999999999">
+                    <div class="calle1 text-danger "></div>
+                </div>
+                <div class="mx-2">
+                    <label for="tel2" class="fw-bold"> <i class="bi bi-person-bounding-box"></i>Teléfono 2</label>
+                    <input type="text" class="form-control" name="tel2" id="tel2" placeholder="ej: 099999999">
+                    <div class="tel2 text-danger"></div>
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <button id="botton" class="col-12 btn btn-success d-flex justify-content-center olvide1">
+                    <span>Registrar</span><i id="icono" class="bi bi-cursor-fill "></i>
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+</div>

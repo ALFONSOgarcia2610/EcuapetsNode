@@ -1,0 +1,103 @@
+
+<div class="mb-5 col-md-10 mx-auto ">
+    <div class="card formulario">
+        <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-dark">
+            <h4><i class="fa-solid fa-pen-to-square text-success"></i>Agregar Datos Medicos</h4>
+        </div>
+        <div class="card-body">
+            <form action="/mascotas/edit-mascotasmed/{{mascota._id}}?_method=PUT" method="POST"
+                  enctype="multipart/form-data">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="border mb-2 baner">
+
+                    <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-dark ">
+                        <h4><i class="fa-solid fa-user-doctor text-danger"></i>Datos Medicos</h4>
+                    </div>
+
+                    <div class="mb-4 d-flex justify-content-around md-2">
+                        <div>
+                            <label for="v1" class="fw-bold">Primera vacuna:</label>
+                            <input type="text" class="form-control" name="v1" id="v1" placeholder="Primera Vacuna">
+                            <div class="especie text-danger"></div>
+                        </div>
+                        <div>
+                            <label for="fechav1" class="fw-bold">Fecha Primera Vacuna:</label>
+                            <input type="date" class="form-control" name="fechav1" id="fechav1">
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex justify-content-around ">
+                        <div>
+                            <label for="v2" class="fw-bold">Segunda vacuna:</label>
+                            <input type="text" class="form-control" name="v2" id="v2" placeholder="Segunda Vacuna">
+                            <div class="especie text-danger"></div>
+                        </div>
+                        <div>
+                            <label for="fechav2" class="fw-bold">Fecha Segunda Vacuna:</label>
+                            <input type="date" class="form-control" name="fechav2" id="fechav2">
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex justify-content-around ">
+
+                        <div>
+                            <label for="v3" class="fw-bold">Tercera vacuna:</label>
+                            <input type="text" class="form-control" name="v3" id="v3" placeholder="Tercera Vacuna">
+                            <div class="especie text-danger"></div>
+                        </div>
+                        <div>
+                            <label for="fechav3" class="fw-bold">Fecha Tercera Vacuna</label>
+                            <input type="date" class="form-control" name="fechav3" id="fechav3">
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex justify-content-around ">
+                        <div>
+                            <label for="v4" class="fw-bold">Cuarta vacuna:</label>
+                            <input type="text" class="form-control" name="v4" id="v4" placeholder="Cuarta Vacuna">
+                            <div class="especie text-danger"></div>
+                        </div>
+
+                        <div>
+                            <label for="fechav4" class="fw-bold">Fecha Cuarta Vacuna</label>
+                            <input type="date" class="form-control" name="fechav4" id="fechav4">
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex justify-content-around ">
+                        <div>
+                            <label for="v5" class="fw-bold">Quinta vacuna:</label>
+                            <input type="text" class="form-control" name="v5" id="v5" placeholder="Quinta Vacuna">
+                            <div class="especie text-danger"></div>
+                        </div>
+                        <div>
+                            <label for="fechav5" class="fw-bold">Fecha Quinta Vacuna</label>
+                            <input type="date" class="form-control" name="fechav5" id="fechav5">
+                        </div>
+                    </div>
+                    <div class="form-group mb-3 ">
+                        <div>
+                            <label for="medicamentos" class="fw-bold">Medicamentos
+                                administrados:</label>
+                            <textarea name="medicamentos" id="medicamentos" class="form-control"
+                                placeholder="ej: Mirapel"></textarea>
+                            <div class="mensaje text-danger"></div>
+                        </div>
+                        <div>
+                            <label for="descripcion" class="fw-bold">Patologías
+                                Médicas:</label>
+                            <textarea name="descripcion" id="descripcion" class="form-control"
+                                placeholder="ej: Sufre del Corazon"></textarea>
+                            <div class="mensaje text-danger"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center olvide1">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
