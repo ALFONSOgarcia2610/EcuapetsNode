@@ -49,13 +49,13 @@ router.get('/mascotas/reportadas', isAuthenticated, async (req, res) => {
 router.get('/mascotas/edit/:id', isAuthenticated, async (req, res) => {
     const mascota = await Mascota.findById(req.params.id).lean();
     const photos = await Photo.find({Mascota: req.params.id}).lean();
-    const QR = await qrcode.toDataURL("http://localhost:4000/mascotas/info/" + req.params.id);
+    const QR = await qrcode.toDataURL("https://ecuapets.herokuapp.com/mascotas/info/" + req.params.id);
     res.render('mascotas/edit-mascotas', { mascota, photos, QR});
 });
 router.get('/mascotas/addfotos/:id', isAuthenticated, async (req, res) => {
     const mascota = await Mascota.findById(req.params.id).lean();
     const photos = await Photo.find({Mascota: req.params.id}).lean();
-    const QR = await qrcode.toDataURL("http://localhost:4000/mascotas/info/" + req.params.id);
+    const QR = await qrcode.toDataURL("https://ecuapets.herokuapp.com/mascotas/info/" + req.params.id);
     res.render('mascotas/add-fotos', { mascota, photos, QR});
 });
 router.get('/mascotas/reporte/:id', isAuthenticated,  async (req, res) => {
