@@ -67,7 +67,7 @@ router.get('/mascotas/info/:id', async (req, res) => {
     const photos = await Photo.find({Mascota: req.params.id}).lean();
     const reporte = await Reporte.findOne({Mascota: req.params.id}).lean().sort({ date: 'desc' });
     const usuario = await User.findOne({_id: mascota.propietario});
-    const QR = await qrcode.toDataURL("http://localhost:4000/mascotas/info/" + req.params.id);
+    const QR = await qrcode.toDataURL("https://ecuapets.herokuapp.com/mascotas/info/" + req.params.id);
     res.render('mascotas/info-mascotas', {usuario, mascota, photos, QR, reporte});
   
 });
