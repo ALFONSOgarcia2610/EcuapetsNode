@@ -1,5 +1,5 @@
-<div class="mb-5 col-md-10 mx-auto mt-4 ">
-    <div class="card formulario">
+<div class="mb-5 col-md-10 mx-auto mt-4 mx-5">
+    <div class="card formulario mx-4">
         <div class="card-header d-flex justify-content-center mb-5">
             <h3 class="text-dark"><i class="fa-solid fa-shield-dog text-danger"></i> Mi nombre es {{mascota.nombre}}
             </h3>
@@ -29,20 +29,20 @@
             </p>
             {{/if}}
         </div>
-         {{#if mascota.estado}}
+        {{#if mascota.estado}}
         <div class="border border-primary mb-2 baner">
             <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-black">
                 <h4><i class="fa-solid fa-address-book text-danger"></i>Datos de Contacto</h4>
             </div>
-            <div class="mb-4 d-flex justify-content-around">
+            <div class="mb-4 d-flex justify-content-center text-center">
                 <div class="">
                     <label class="form-label fw-bold">Propietario</label>
                     <p>{{usuario.nombre}}</p>
                 </div>
-                <div class="">
+                <!----===== <div class="">
                     <label class="form-label fw-bold">Email:</label>
                     <p>{{usuario.email}}</p>
-                </div>
+                </div> ===--->
             </div>
             <div class="mb-4 d-flex justify-content-around">
                 {{#if usuario.provincia}}
@@ -59,7 +59,7 @@
                 {{/if}}
             </div>
 
-            <div class="mb-4 d-flex justify-content-around">
+            <!----===== <div class="mb-4 d-flex justify-content-around">
                 {{#if usuario.c1}}
                 <div class="">
                     <label class="form-label fw-bold">Calle Principal:</label>
@@ -73,7 +73,7 @@
                 </div>
                 {{/if}}
                 
-            </div>
+            </div> ===---->
             <div class="mb-4 d-flex justify-content-around">
                 {{#if usuario.tel1}}
                 <div class="">
@@ -111,12 +111,12 @@
                         <p>{{mascota.genero}}</p>
                     </div>
                 </div>
-                <div class="mb-4 d-flex justify-content-center">
+                <!----==== <div class="mb-4 d-flex justify-content-center">
                     <div class="">
                         <label class="form-label fw-bold">Fecha de Nacimiento:</label>
-                        <p>{{mascota.fechanacimiento}}</p>
+                        <p>{{mascota.fechanacimiento}}</p> 
                     </div>
-                </div>
+                </div> ====---->
             </div>
             {{#if mascota.estado}}
             <div class="border border-primary mb-2 baner">
@@ -133,12 +133,12 @@
                         <p>{{reporte.detalle}}</p>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center">
+               <!----===== <div class="d-flex justify-content-center">
                     <div>
                         <label class="form-label fw-bold">Fecha de Reporte:</label>
                         <p>{{reporte.date}}</p>
                     </div>
-                    </div>
+                </div> ===--->
             </div>
             {{/if}}
             <div class="border border-primary mb-2 baner">
@@ -152,7 +152,7 @@
                         <div class="form-group">
                             <p>{{mascota.v1}}</p>
                         </div>
-                         <div class="form-group">
+                        <div class="form-group">
                             <p>{{mascota.fechav1}}</p>
                         </div>
                     </div>
@@ -165,46 +165,46 @@
                         <div class="form-group">
                             <p>{{mascota.v2}}</p>
                         </div>
-                         <div class="form-group">
+                        <div class="form-group">
                             <p>{{mascota.fechav2}}</p>
                         </div>
                     </div>
                 </div>
                 {{/if}}
                 {{#if mascota.v3}}
-                  <div class="mb-4 d-flex justify-content-center text-center">
+                <div class="mb-4 d-flex justify-content-center text-center">
                     <div class="">
                         <label class="form-label fw-bold">Tercera Vacuna</label>
                         <div class="form-group">
                             <p>{{mascota.v3}}</p>
                         </div>
-                         <div class="form-group">
+                        <div class="form-group">
                             <p>{{mascota.fechav3}}</p>
                         </div>
                     </div>
                 </div>
                 {{/if}}
                 {{#if mascota.v4}}
-                  <div class="mb-4 d-flex justify-content-center text-center">
+                <div class="mb-4 d-flex justify-content-center text-center">
                     <div class="">
                         <label class="form-label fw-bold">Cuarta Vacuna</label>
                         <div class="form-group">
                             <p>{{mascota.v4}}</p>
                         </div>
-                         <div class="form-group">
+                        <div class="form-group">
                             <p>{{mascota.fechav4}}</p>
                         </div>
                     </div>
                 </div>
                 {{/if}}
                 {{#if mascota.v5}}
-                  <div class="mb-4 d-flex justify-content-center text-center">
+                <div class="mb-4 d-flex justify-content-center text-center">
                     <div class="">
                         <label class="form-label fw-bold">Quinta Vacuna</label>
                         <div class="form-group">
                             <p>{{mascota.v5}}</p>
                         </div>
-                         <div class="form-group">
+                        <div class="form-group">
                             <p>{{mascota.fechav5}}</p>
                         </div>
                     </div>
