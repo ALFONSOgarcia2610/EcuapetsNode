@@ -1,6 +1,16 @@
-<div class="mb-5 col-md-10 mx-auto mt-4 mx-5">
-    <div class="card formulario mx-4">
-        <div class="card-header d-flex justify-content-center mb-5">
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<div class="mb-5 col-md-10 mx-auto mt-4 mx-5 container formulario3">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <div class="card mx-4">
+        <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-dark">
             <h3 class="text-dark"><i class="fa-solid fa-shield-dog text-danger"></i> Mi nombre es {{mascota.nombre}}
             </h3>
         </div>
@@ -18,17 +28,26 @@
         {{/if}}
         <div class=" mb-2">
             {{#if mascota.estado}}
-            <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-dark baner text-center">
+            <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-dark  text-center">
                 <h4><i class="d-felx fa-solid fa-money-bill text-success"></i>Se ofrece una recompensa de $
                     {{reporte.recompensa}}</h4>
             </div>
-            <p class="letra d-flex justify-content-center text-black fw-bold">
-                "Si Me encuentras Solo y Desorientado
-                por favor, Ayudame a
-                regresar a mi hogar"
-            </p>
             {{/if}}
         </div>
+
+
+    </div>
+    <!--Tabs-->
+    <ul class="tabs-links d-flex justify-content-end">
+        <li class="tab-link active"><i class="fa-solid fa-address-book text-danger"></i>Informacion Basica</li>
+        <li class="tab-link "><i class="fa-solid fa-notes-medical text-danger"></i>Carnet Digital</li>
+    </ul>
+
+    <!--Formulario de login-->
+
+
+
+    <div class="grupo-input  formulario active">
         {{#if mascota.estado}}
         <div class="border border-primary mb-2 baner">
             <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-black">
@@ -133,7 +152,7 @@
                         <p>{{reporte.detalle}}</p>
                     </div>
                 </div>
-               <!----===== <div class="d-flex justify-content-center">
+                <!----===== <div class="d-flex justify-content-center">
                     <div>
                         <label class="form-label fw-bold">Fecha de Reporte:</label>
                         <p>{{reporte.date}}</p>
@@ -141,93 +160,217 @@
                 </div> ===--->
             </div>
             {{/if}}
-            <div class="border border-primary mb-2 baner">
-                <div class="card-header mb-3 letra d-flex justify-content-center fw-bold text-black">
-                    <h4><i class="fa-solid fa-notes-medical text-danger"></i>Datos Medicos</h4>
-                </div>
-                {{#if mascota.v1}}
-                <div class="mb-4 d-flex justify-content-center text-center">
-                    <div class="">
-                        <label class="form-label fw-bold">Primera Vacuna</label>
-                        <div class="form-group">
-                            <p>{{mascota.v1}}</p>
-                        </div>
-                        <div class="form-group">
-                            <p>{{mascota.fechav1}}</p>
-                        </div>
-                    </div>
-                </div>
-                {{/if}}
-                {{#if mascota.v2}}
-                <div class="mb-4 d-flex justify-content-center text-center">
-                    <div class="">
-                        <label class="form-label fw-bold">Segunda Vacuna</label>
-                        <div class="form-group">
-                            <p>{{mascota.v2}}</p>
-                        </div>
-                        <div class="form-group">
-                            <p>{{mascota.fechav2}}</p>
-                        </div>
-                    </div>
-                </div>
-                {{/if}}
-                {{#if mascota.v3}}
-                <div class="mb-4 d-flex justify-content-center text-center">
-                    <div class="">
-                        <label class="form-label fw-bold">Tercera Vacuna</label>
-                        <div class="form-group">
-                            <p>{{mascota.v3}}</p>
-                        </div>
-                        <div class="form-group">
-                            <p>{{mascota.fechav3}}</p>
-                        </div>
-                    </div>
-                </div>
-                {{/if}}
-                {{#if mascota.v4}}
-                <div class="mb-4 d-flex justify-content-center text-center">
-                    <div class="">
-                        <label class="form-label fw-bold">Cuarta Vacuna</label>
-                        <div class="form-group">
-                            <p>{{mascota.v4}}</p>
-                        </div>
-                        <div class="form-group">
-                            <p>{{mascota.fechav4}}</p>
-                        </div>
-                    </div>
-                </div>
-                {{/if}}
-                {{#if mascota.v5}}
-                <div class="mb-4 d-flex justify-content-center text-center">
-                    <div class="">
-                        <label class="form-label fw-bold">Quinta Vacuna</label>
-                        <div class="form-group">
-                            <p>{{mascota.v5}}</p>
-                        </div>
-                        <div class="form-group">
-                            <p>{{mascota.fechav5}}</p>
-                        </div>
-                    </div>
-                </div>
-                {{/if}}
-                {{#if mascota.descripcion}}
-                <div class="mb-4 d-flex justify-content-center">
-                    <div class="">
-                        <label class="form-label fw-bold">Patologias de la Mascota:</label>
-                        <p class="d-flex justify-content-center">{{mascota.descripcion}}</p>
-                    </div>
-                </div>
-                {{/if}}
-                {{#if mascota.medicamentos}}
-                <div class="mb-4 d-flex justify-content-center">
-                    <div class="">
-                        <label class="form-label fw-bold">Prescripcion Medica:</label>
-                        <p class="d-flex justify-content-center">{{mascota.medicamentos}}</p>
-                    </div>
-                </div>
-                {{/if}}
-            </div>
 
         </div>
+
+
+    </div>
+
+    <!--Formulario de registro-->
+
+
+    <div class="grupo-input formulario">
+
+        <div class="border border-primary mb-2 baner">
+            {{#if mascota.v1}}
+            <div class="mb-4 d-flex justify-content-center text-center">
+                <div class="">
+                    <label class="form-label fw-bold">Primera Vacuna</label>
+                    <div class="form-group">
+                        <p>{{mascota.v1}}</p>
+                    </div>
+                    <div class="form-group">
+                        <p>{{mascota.fechav1}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+            {{#if mascota.v2}}
+            <div class="mb-4 d-flex justify-content-center text-center">
+                <div class="">
+                    <label class="form-label fw-bold">Segunda Vacuna</label>
+                    <div class="form-group">
+                        <p>{{mascota.v2}}</p>
+                    </div>
+                    <div class="form-group">
+                        <p>{{mascota.fechav2}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+            {{#if mascota.v3}}
+            <div class="mb-4 d-flex justify-content-center text-center">
+                <div class="">
+                    <label class="form-label fw-bold">Tercera Vacuna</label>
+                    <div class="form-group">
+                        <p>{{mascota.v3}}</p>
+                    </div>
+                    <div class="form-group">
+                        <p>{{mascota.fechav3}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+            {{#if mascota.v4}}
+            <div class="mb-4 d-flex justify-content-center text-center">
+                <div class="">
+                    <label class="form-label fw-bold">Cuarta Vacuna</label>
+                    <div class="form-group">
+                        <p>{{mascota.v4}}</p>
+                    </div>
+                    <div class="form-group">
+                        <p>{{mascota.fechav4}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+            {{#if mascota.v5}}
+            <div class="mb-4 d-flex justify-content-center text-center">
+                <div class="">
+                    <label class="form-label fw-bold">Quinta Vacuna</label>
+                    <div class="form-group">
+                        <p>{{mascota.v5}}</p>
+                    </div>
+                    <div class="form-group">
+                        <p>{{mascota.fechav5}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+            {{#if mascota.descripcion}}
+            <div class="mb-4 d-flex justify-content-center">
+                <div class="">
+                    <label class="form-label fw-bold">Patologias de la Mascota:</label>
+                    <p class="d-flex justify-content-center">{{mascota.descripcion}}</p>
+                </div>
+            </div>
+            {{/if}}
+            {{#if mascota.medicamentos}}
+            <div class="mb-4 d-flex justify-content-center">
+                <div class="">
+                    <label class="form-label fw-bold">Prescripcion Medica:</label>
+                    <p class="d-flex justify-content-center">{{mascota.medicamentos}}</p>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+
     </div>
 </div>
+
+<script>
+    /*========================================
+Slider
+==========================================*/
+    if (document.querySelector('.contenedor-slider')) {
+
+        let index = 1;
+        let selectedIndex = 1;
+
+        const slides = document.querySelector('.slider');
+        const slide = slides.children;
+        const slidesTotal = slides.childElementCount;
+
+        const dots = document.querySelector('.dots');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+
+
+        //agregamos los punto de acuerdo a la cantidad de slides
+        for (let i = 0; i < slidesTotal; i++) {
+            dots.innerHTML += '<span class="dot"></span>';
+        }
+
+        //ejecutamos la funcion
+        mostrarSlider(index);
+
+        //hacemos que nuestro slide sea automatico
+        setInterval(() => {
+            mostrarSlider(index = selectedIndex);
+        }, 5000); //rempresentados en milesegundos
+
+        //funcion para mostrar el slider
+        function mostrarSlider(num) {
+            if (selectedIndex > slidesTotal) {
+                selectedIndex = 1;
+            } else {
+                selectedIndex++;
+            }
+
+            if (num > slidesTotal) {
+                index = 1;
+            }
+
+            if (num < 1) {
+                index = slidesTotal;
+            }
+
+            //removemos la clase active de todos los slide
+            for (let i = 0; i < slidesTotal; i++) {
+                slide[i].classList.remove('active');
+            }
+
+            //removemos la clase active de los puntos
+
+            for (let x = 0; x < dots.children.length; x++) {
+                dots.children[x].classList.remove('active');
+            }
+
+            //mostramos el slide
+            slide[index - 1].classList.add('active');
+
+            //agregamos la clase active al punto donde se encuntra el slide
+            dots.children[index - 1].classList.add('active');
+
+
+        }
+
+        //evento para nuestro botones prev y next
+        next.addEventListener('click', (e) => {
+            mostrarSlider(index += 1);
+            selectedIndex = index;
+        });
+
+        prev.addEventListener('click', (e) => {
+            mostrarSlider(index += -1);
+            selectedIndex = index;
+        });
+
+        //puntos
+        for (let y = 0; y < dots.children.length; y++) {
+
+            //por cada dot que ecuentre le agregamos el evento click y ejecutamo la funcion de slide
+            dots.children[y].addEventListener('click', () => {
+                mostrarSlider(index = y + 1);
+                selectedIndex = y + 1;
+            });
+        }
+
+    }
+
+
+    /*========================================
+    Tabs Formulario
+    ==========================================*/
+    const tabLink = document.querySelectorAll('.tab-link');
+    const formularios = document.querySelectorAll('.formulario');
+
+    for (let x = 0; x < tabLink.length; x++) {
+
+        tabLink[x].addEventListener('click', () => {
+
+            //removemos la clase active de todos los tabs encotrados
+            tabLink.forEach((tab) => tab.classList.remove('active'));
+
+            //le agregamos la clase active al tab que se le hizo click
+            tabLink[x].classList.add('active');
+
+            //mostramos el formulario correspondiente
+            //para los formularios funciona exactamente los mismo que los tabs
+            formularios.forEach((form) => form.classList.remove('active'));
+            formularios[x].classList.add('active');
+
+        })
+    }
+
+</script>
